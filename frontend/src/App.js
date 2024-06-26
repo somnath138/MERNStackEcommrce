@@ -70,7 +70,7 @@ function App() {
 
         <Route exact path="/product/:id" Component={ProductDetails} />
         <Route exact path="/products" Component={Products} />
-        {/* <Route path="/products/:keyword" Component={Products} /> */}
+        <Route path="/products/:keyword" Component={Products} />
         <Route exact path="/search" Component={Search} />
         {isAuthernticated && (
           <Route exact path="/account" Component={Profile} />
