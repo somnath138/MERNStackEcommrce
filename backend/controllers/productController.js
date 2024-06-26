@@ -22,23 +22,27 @@ exports.createProduct = catchAsyncErrors(async (req, res) => {
 
 //get all products
 exports.getAllProducts = catchAsyncErrors(async (req, res, next) => {
-  //return next(new ErrorHandler("this is my checking error", 500));
-  //use to check the error
-  const resultPerpage = 4;
-  const productsCount = await Product.countDocuments(); //maintain the cound of the product helpfull to dashboard section
-  //countDocuments is the function
-  //console.log(productCount);
-  const apiFeatures = new ApiFeatures(Product.find(), req.query) //search the keyword wise
-    .search()
-    .filter()
-    .pagination(resultPerpage); //number of product per page pass
-  const product = await apiFeatures.query; // write this access  this.query = this.query.find({ ...keyword }); this query which present in the apifeatures
-  res.status(200).json({
-    success: true,
-    product,
-    productsCount,
-    resultPerpage,
-  });
+  try {
+    const resultPerpage = 4;
+    const productsCount = await Product.countDocuments();
+
+    const apiFeatures = new ApiFeatures(Product.find(), req.query)
+      .search()
+      .filter()
+      .pagination(resultPerpage);
+
+    const products = await apiFeatures.query;
+
+    res.status(200).json({
+      success: true,
+      products,
+      productsCount,
+      resultPerpage,
+    });
+  } catch (error) {
+    console.error("Error fetching products:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
 });
 
 //update products --admin
