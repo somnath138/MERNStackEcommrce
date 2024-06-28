@@ -1,0 +1,75 @@
+
+.contactcontainer {
+    display: flex;
+    margin: 2vmax auto;
+
+    flex-wrap: wrap; 
+    /* flex wrap koray page ee 80vw tee joto gulo image nite parbe toto gulo nibe baki gulo niche chole jabe */
+    justify-content: center;
+    max-width: 100vh;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.h1forcontact {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #007bff;
+}
+.h2forcontact{
+    color: #007bff;
+    margin-bottom: 10px;
+}
+ .pforcontact{
+    margin: 10px 0;
+    font-size: 1.1em;
+}
+.aforcontact {
+    color: #007bff;
+    text-decoration: none;
+    border-bottom: 1px dotted #007bff;
+}
+.aforcontact:hover {
+    text-decoration: none;
+    border-bottom: 1px solid #007bff;
+}
+.contact-section {
+    margin-bottom: 25px;
+    margin-left: 1rem;
+    padding: 21px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    background-color: #f1f3f5;
+  
+}
+.contact-section:last-child {
+    margin-bottom: 0;
+}
+.contact-section h2 {
+    margin-top: 0;
+}
+.social-media a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+.centralised{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+  @keyframes mailBtnAnimation {
+    to {
+      transform: translateX(0);
+    }
+  }

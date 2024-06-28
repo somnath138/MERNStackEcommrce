@@ -19,7 +19,7 @@ const UserOptions = ({ user }) => {
   const alert = useAlert();
   const dispatch = useDispatch();
   const options = [
-    { icon: <ListAltIcon />, name: "Orders", func: orders },
+    { icon: <ListAltIcon />, name: "Products", func: Products },
     { icon: <PersonIcon />, name: "Profile", func: account },
     {
       icon: (
@@ -43,8 +43,8 @@ const UserOptions = ({ user }) => {
     navigate("/admin/dashboard");
   }
 
-  function orders() {
-    navigate("/orders");
+  function Products() {
+    navigate("/products");
   }
   function account() {
     navigate("/account");

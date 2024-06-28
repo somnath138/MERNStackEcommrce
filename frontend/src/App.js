@@ -28,6 +28,8 @@ import ConfirmOrder from "./component/Cart/ConfirmOrder";
 import Payment from "./component/Cart/Payment";
 import MyOrder from "./component/Order/MyOrder";
 import OrderDetails from "./component/Order/OrderDetails";
+import Contact from "./component/layout/Contact/Contact";
+import About from "./component/layout/About/About";
 // import { loadStripe } from "@stripe/stripe-js";
 // import { Elements } from "@stripe/react-stripe-js";
 function App() {
@@ -118,6 +120,8 @@ function App() {
 
         <Route exact path="/login" Component={LoginSignUp}></Route>
         <Route exact path="/cart" Component={Cart}></Route>
+        <Route exact path="/Contact" Component={Contact}></Route>
+        <Route exact path="/about" Component={About}></Route>
       </Routes>
       <Footer />
     </>
