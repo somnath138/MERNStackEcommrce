@@ -52,7 +52,8 @@ exports.loginUser = catchAsyncErrors(async (req, res, next) => {
 
   //idPassword matched korlo ki na seta check korbe
   //401 status code mean unotharized user
-  const isPasswordMatched = user.comparePassword(password);
+  const isPasswordMatched = await user.comparePassword(password);
+  //pointed wrong part so if you does not write await it will be login any password
   //then go to compare
   if (!isPasswordMatched) {
     return next(new ErrorHandler("Invalid email or password", 401));

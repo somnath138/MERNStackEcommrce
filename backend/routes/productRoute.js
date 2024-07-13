@@ -6,6 +6,8 @@ const {
   deleteProduct,
   productDetails,
   createProductReview,
+  getProductReview,
+  deleteProductReview,
 } = require("../controllers/productController");
 const { isAuthenticatedUser, authorizedRoles } = require("../middleware/auth");
 
@@ -26,4 +28,8 @@ router
 router.route("/product/:id").get(productDetails); //if user authorized then only give the access to delete and put the request
 
 router.route("/review").put(isAuthenticatedUser, createProductReview);
+router
+  .route("/reviews")
+  .get(getProductReview)
+  .delete(isAuthenticatedUser, deleteProductReview);
 module.exports = router;

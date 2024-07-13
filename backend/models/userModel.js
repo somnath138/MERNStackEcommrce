@@ -54,6 +54,8 @@ userSchema.pre("save", async function (next) {
   this.password = await bcrypt.hash(this.password, 10); //convert password into the hash password
 });
 //JWT TOKEN
+
+//instant of register then login
 userSchema.methods.getJWTToken = function () {
   //create a function whose name is getJWTToken
   return jwt.sign({ id: this._id }, process.env.JWT_SECRET, {
@@ -63,6 +65,8 @@ userSchema.methods.getJWTToken = function () {
 
 //compare password
 userSchema.methods.comparePassword = async function (enteredPassword) {
+  console.log(enteredPassword);
+  console.log(this.password);
   return await bcrypt.compare(enteredPassword, this.password);
   //bcrypt compare likha thakle password kee compare kore nibe using hash
 };

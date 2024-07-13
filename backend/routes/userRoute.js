@@ -45,10 +45,7 @@ router
   .get(isAuthenticatedUser, authorizedRoles("admin"), getSingleUser)
   .put(isAuthenticatedUser, authorizedRoles("admin"), updateProfileByAdmin)
   .delete(isAuthenticatedUser, authorizedRoles("admin"), deleteProfileByAdmin);
-router
-  .route("/review")
-  .get(getProductReview)
-  .delete(isAuthenticatedUser, deleteProductReview);
+router;
 
 module.exports = router;
 
