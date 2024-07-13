@@ -28,8 +28,13 @@
   }
   
   .CarouselImage {
-    width: 40vmax;
-     height: 40vmax; 
+    height: 29vmax;
+    display: flex;
+    width: 25vmax;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 7rem;
   }
   
   .detailsBlock-1 > h2 {
