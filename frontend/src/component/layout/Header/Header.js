@@ -22,7 +22,7 @@ const options = {
   logoHoverSize: "10px",
   logoHoverColor: "#25bed7",
   link1Text: "Home",
-  link2Text: "Products",
+  link2Text: "Medicines",
   link3Text: "Contact",
   link4Text: "About",
   link1Url: "/",

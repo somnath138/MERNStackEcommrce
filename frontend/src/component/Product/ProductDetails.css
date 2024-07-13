@@ -178,12 +178,13 @@
   
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
     border: 1px solid rgba(56, 56, 56, 0.116);
-    width: 30vmax;
+    width: 15vmax;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 1vmax;
-    padding: 3vmax;
+    padding: 2vmax;
+    border-radius: 2rem;
   }
   .reviewCard > img {
     width: 5vmax;
@@ -196,7 +197,13 @@
     color: rgba(0, 0, 0, 0.445);
     font: 300 0.8vmax cursive;
   }
-  
+  .reviewHeading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    
+  }
   .noReviews {
     font: 400 1.3vmax "Gill Sans";
     text-align: center;

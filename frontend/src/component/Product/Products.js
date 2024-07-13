@@ -11,14 +11,14 @@ import Typography from "@material-ui/core/Typography";
 import { useAlert } from "react-alert";
 import MetaData from "../layout/MetaData";
 const categories = [
-  "laptop",
-  "Footwear",
-  "Bottom",
-  "Tops",
-  "Attire",
-  "Camera",
-  "SmartPhones",
-  "machine",
+  "Must Have",
+  "Elderly Care",
+  "Personal Care",
+  "Healthcare Devices",
+  "Health Food and Drinks",
+  "Skin care",
+  "Mother and Baby Care",
+  "Sexual Wellness",
 ];
 const Products = () => {
   const dispatch = useDispatch();
@@ -53,7 +53,7 @@ const Products = () => {
       ) : (
         <Fragment>
           <MetaData title="PRODUCTS--EOMMERCE"></MetaData>
-          <h2 className="productsHeading">Products</h2>
+          <h2 className="productsHeading">Medicines</h2>
           <div className="products">
             {products &&
               products.map((Products) => (

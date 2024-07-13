@@ -7,6 +7,15 @@ import {
   ALL_DETAILS_REQUEST,
   ALL_DETAILS_SUCCESS,
   ALL_DETAILS_FAIL,
+  NEW_REVIEW_REQUEST,
+  NEW_REVIEW_SUCCESS,
+  NEW_REVIEW_FAIL,
+  // ALL_REVIEW_REQUEST,
+  // ALL_REVIEW_SUCCESS,
+  // ALL_REVIEW_FAIL,
+  // DELETE_REVIEW_REQUEST,
+  // DELETE_REVIEW_SUCCESS,
+  // DELETE_REVIEW_FAIL,
 } from "../constants/productConostants";
 //import { useParams } from "react-router-dom";
 //ei page ee sudhu function likhbo ki dispatch korbo na korbo setai sudhu
@@ -47,6 +56,26 @@ export const getProductDetails = (id) => async (dispatch) => {
   }
 };
 
+//reviewData
+export const newReview = (reviewData) => async (dispatch) => {
+  try {
+    dispatch({ type: NEW_REVIEW_REQUEST });
+    const config = {
+      headers: { "Content-Type": "application/json" },
+    };
+    const { data } = await axios.put(
+      `${BACKEND_API_URL}/api/v1/review`,
+      reviewData,
+      config
+    );
+    dispatch({ type: NEW_REVIEW_SUCCESS, payload: data.success });
+  } catch (error) {
+    dispatch({
+      type: NEW_REVIEW_FAIL,
+      payload: error.response.data.message,
+    });
+  }
+};
 export const clearErrors = () => async (dispatch) => {
   dispatch({ type: CLEAR_ERRORS });
 };

@@ -36,7 +36,11 @@ const LoginSignUp = () => {
   const loginSubmit = (e) => {
     e.preventDefault();
     dispatch(login(loginEmail, loginPassword));
-    navigate("/account");
+    if (isAuthernticated) {
+      navigate("/account");
+    } else {
+      navigate("/login");
+    }
   };
   const location = useLocation();
   const redirect = location.search ? location.search.split("=")[1] : "/account";

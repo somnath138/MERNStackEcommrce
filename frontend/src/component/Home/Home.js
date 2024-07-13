@@ -36,7 +36,7 @@ const Home = () => {
 
           <div className="banner">
             <p>Welcome to MediCo</p>
-            <h1>Find AMAZING PRODUCTS BELLOW</h1>
+            <h1>"Trusted Medical Insights for a Healthier You"</h1>
             <a href="#container">
               <button>
                 Scroll <CgMouse />
