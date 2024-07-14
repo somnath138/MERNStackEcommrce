@@ -8,10 +8,14 @@ function About() {
       <div class="about-section">
         <h2 class="aboutsection-title ">Welcome to Medico</h2>
         <p class="aboutparagraph">
-          My name is Somnath Das, and I am the creator of Medico. While pursuing
+          {/* My name is Somnath Das, and I am the creator of Medico. While pursuing
           my Master's of Computer Application from NIT Kurukshetra, I developed
           this website to make purchasing medicines easier and more accessible
-          for everyone.
+          for everyone. */}
+          Soumatya dutta,Abhisek das,Shubhankarroy, and we are the creator of
+          Medico. While pursuing my Master's of Computer Application from
+          univercity of north bengal, we developed this website to make
+          purchasing medicines easier and more accessible for everyone.
         </p>
       </div>
 

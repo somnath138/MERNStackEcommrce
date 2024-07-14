@@ -14,7 +14,8 @@ const Footer = () => {
       <div className="midFooter">
         <h1>MediCo</h1>
 
-        <p>Copyrights 2021 &copy; MeSomnath</p>
+        {/* <p>Copyrights 2021 &copy; MeSomnath</p> */}
+        <p>Copyrights 2021 &copy; TeamMedico</p>
       </div>
 
       <div className="rightFooter">
